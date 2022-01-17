@@ -1,11 +1,17 @@
 /*-------- Fonts --------*/
-$font-r: "Roboto";
-$font-b: "Gotham Bold";
-$font-book: "Gotham Book";
-$font-av: "Avenir Next Ultra";
+$font-r: "AvertaCY-Regular";
+$font-b: "AvertaCY-Bold";
+$font-rounded: "PP-Pangram-Sans-Rounded-Regular";
+$font-rounded-bold: "PP-Pangram-Sans-Rounded-Bold";
+$font-spongy: "Spongy-Solid";
 
 /*-------- Colors --------*/
-$orange: #ff9500;
+$orange: #F2A848;
+$blue: #4E97B9;
+$red: #CB352E;
+$black: #050402;
+$beige: #F9EDCA;
+$yellow: #EBCB62;
 
 @import './reset.scss';
 @import './components/components.scss';

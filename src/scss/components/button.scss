@@ -4,41 +4,36 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
+
+    height: 64px;
+    padding: 0 20px;
+
+    background-color: $orange;
+    border: 2px solid #050402;
+    border-radius: 100px;
+
+    font-family: $font-b;
+    font-size: 16px;
+    color: $black;
+    text-transform: uppercase;
+
+    transition: color 0.2s cubic-bezier(0.19, 1, 0.22, 1), background-color 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+
+    &:hover {
+        color: #ffffff;
+    }
 }
 
 .button {
 
-    &--download {
-        width: 250px;
-        position: relative;
-        z-index: 1;
-    }
-
-    &--download:not(:first-child) {
-        margin-left: 30px;
+    &--header {
+        height: 56px;
     }
 }
 
-@media (max-width: 989px) {
+.button {
 
-    .button {
-
-        &--download {
-            width: 180px;
-        }
-    }
-}
-
-@media (max-width: 619px) {
-
-    .button {
-
-        &--download {
-            width: 120px;
-        }
-
-        &--download:not(:first-child) {
-            margin-left: 15px;
-        }
+    &--beige {
+        background-color: $beige;
     }
 }
