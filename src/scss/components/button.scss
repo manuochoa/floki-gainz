@@ -1,0 +1,44 @@
+/*-------- Button --------*/
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+
+    &--download {
+        width: 250px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &--download:not(:first-child) {
+        margin-left: 30px;
+    }
+}
+
+@media (max-width: 989px) {
+
+    .button {
+
+        &--download {
+            width: 180px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .button {
+
+        &--download {
+            width: 120px;
+        }
+
+        &--download:not(:first-child) {
+            margin-left: 15px;
+        }
+    }
+}
