@@ -8,7 +8,7 @@ import Quantity from '../common/Quantity';
 export default function Minting() {
     const [itemIndex, setItemIndex] = useState(0);
     const [value, setValue] = useState(1);
-    const [gallery, setGallery] = useState([
+    const [gallery] = useState([
         {
             price: 4,
             id: 1,
