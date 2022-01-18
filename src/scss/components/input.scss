@@ -1,0 +1,48 @@
+/*-------- Input --------*/
+
+.input-wrapper {
+    padding: 8px 8px 8px 20px;
+    background: #F9EDCA;
+    border-radius: 16px;
+}
+
+.input {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.input-wrapper {
+
+    &--footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        width: 55%;
+    }
+
+    &--footer &__input {
+        width: 67%;
+        padding-right: 30px;
+
+        font-family: $font-r;
+        font-size: 18px;
+        color: $black;
+    }
+
+    &--footer &__input::placeholder {
+        color: $black; 
+    }
+
+    &--footer &__button {
+        width: 33%;
+        height: 52px;
+        padding: 0 56px;
+        border-radius: 12px;
+    }
+}

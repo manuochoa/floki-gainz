@@ -1,0 +1,21 @@
+/*-------- Roadmap --------*/
+
+.roadmap {
+    padding-top: 132px;
+    padding-bottom: 132px;
+
+    &__wrapper {
+        background-image: url(../../images/roadmap/bg.svg);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+    }
+
+    &__title {
+        text-align: center;
+    }
+
+    &__cards-list {
+        margin-top: 64px;
+    }
+}

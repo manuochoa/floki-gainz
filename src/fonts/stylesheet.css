@@ -51,3 +51,12 @@
     font-style: normal;
     font-display: swap;
 }
+
+@font-face {
+    font-family: 'AvertaCY-Semibold';
+    src: url('subset-AvertaCY-Semibold.woff2') format('woff2'),
+        url('subset-AvertaCY-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}

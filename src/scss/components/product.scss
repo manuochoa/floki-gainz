@@ -1,0 +1,53 @@
+/*-------- Product --------*/
+
+.product {
+    display: flex;
+    align-items: center;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+
+    &__column--1 {
+        width: 54%;
+    }
+
+    &__column--2 {
+        display: flex;
+        flex-direction: column;
+
+        width: 46%;
+        padding-left: 70px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 32px 0;
+
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    &__item:not(:first-child) {
+        border-top: 2px solid $black;
+    }
+
+    &__item-title {
+        text-transform: uppercase;
+    }
+
+    &__item-text {
+        font-family: $font-b;
+    }
+
+    &__item-text--address {
+        text-decoration: underline;
+    }
+
+    &__button {
+        padding: 0 70px;
+        margin-left: auto;
+    }
+}

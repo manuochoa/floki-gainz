@@ -24,3 +24,14 @@
         color: $blue;
     }
 }
+
+.social {
+
+    &--footer &__icon {
+        color: $beige;
+    }
+
+    &--footer &__icon:hover {
+        color: $yellow;
+    }
+}
