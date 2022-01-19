@@ -30,6 +30,7 @@
     }
 
     &__button-arrow {
+        color: $black;
         transition: color 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 
@@ -40,24 +41,6 @@
 
     &__button:hover &__button-arrow {
         color: $beige;
-    }
-
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 80px;
-    }
-
-    &__menu-link {
-        font-family: $font-sb;
-        font-size: 20px;
-        color: $beige;
-
-        transition: color 0.1s cubic-bezier(0.47, 0, 0.745, 0.715);
-    }
-
-    &__menu-link:hover {
-        color: $yellow;
     }
 
     &__bottom {
@@ -92,10 +75,6 @@
             width: 38%;
         }
 
-        &__menu {
-            margin-top: 30px;
-        }
-
         &__bottom {
             margin-top: 30px;
         }
@@ -110,22 +89,8 @@
 
     .footer {
 
-        &__menu-link {
-            font-size: 18px;
-        }
-
         &__top {
             flex-wrap: wrap;
-        }
-    }
-}
-
-@media (max-width: 619px) {
-
-    .footer {
-
-        &__menu-link {
-            font-size: 16px;
         }
     }
 }
@@ -133,19 +98,6 @@
 @media (max-width: 479px) {
 
     .footer {
-
-        &__menu {
-            flex-wrap: wrap;
-            margin-bottom: -10px;
-        } 
-
-        &__menu-item {
-            display: flex;
-            justify-content: center;
-
-            width: 33%;
-            margin-bottom: 10px;
-        }
 
         &__copyright {
             font-size: 4vw;

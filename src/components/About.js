@@ -1,8 +1,8 @@
 import React from 'react'
 
-export default function About() {
+export default function About({ refProp }) {
     return (
-        <div className="about container">
+        <div className="about container" ref={refProp}>
             <div className="about__wrapper">
                 <h1 className="title about__title">About us</h1>
                 <p className="about__text">

@@ -5,11 +5,11 @@ import logo from "../images/token/logo.png";
 import bg1 from "../images/token/bg1.svg";
 import bg2 from "../images/token/bg2.svg";
 
-export default function Tokenomics() {
+export default function Tokenomics({ refProp }) {
     const { chart, handleChartArray } = useChart();
 
     return (
-        <div className="token">
+        <div className="token" ref={refProp}>
             <img src={bg1} className="token__background token__background--1" alt="bg1" />
             <div className="token__wrapper container">
                 <h1 className="title token__title">Tokenomics</h1>

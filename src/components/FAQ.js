@@ -24,10 +24,10 @@ const questions = [
     }
 ];
 
-export default function FAQ() {
+export default function FAQ({ refProp }) {
 
     return (
-        <div className="faq container">
+        <div className="faq container" ref={refProp}>
             <h1 className="title faq__title">Frequently Asked Questions</h1>
             <Accordion className="faq__accordion" list={questions} />
         </div>

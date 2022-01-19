@@ -23,9 +23,9 @@ const featuresArray = [
     }
 ];
 
-export default function Features() {
+export default function Features({ refProp }) {
     return (
-        <ul className="features">
+        <ul className="features" ref={refProp}>
             {featuresArray.map((item, index) => {
                 return (
                     <li className="features__item" key={index}>

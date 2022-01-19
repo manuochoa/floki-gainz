@@ -5,7 +5,7 @@ import img1 from "../../images/swiper/img1.png";
 import img2 from "../../images/swiper/img2.png";
 import Quantity from '../common/Quantity';
 
-export default function Minting() {
+export default function Minting({ refProp }) {
     const [itemIndex, setItemIndex] = useState(0);
     const [value, setValue] = useState(1);
     const [gallery] = useState([
@@ -22,7 +22,7 @@ export default function Minting() {
     ]);
 
     return (
-        <div className="product container">
+        <div className="product container" ref={refProp}>
             <CustomSwiper gallery={gallery} setItemIndex={setItemIndex} className="product__column product__column--1" />
             <div className="product__column product__column--2">
                 <h1 className="title product__title">Minting</h1>

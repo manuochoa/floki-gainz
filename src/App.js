@@ -7,26 +7,29 @@ import Tokenomics from './components/Tokenomics';
 import Minting from './components/Product/Product';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import { useRef } from 'react';
+import addToRefs from './components/services/addToRefs';
 
 export default function App() {
+    const sections = useRef([]);
 
     return (
         <>
-            <Header />
+            <Header sections={sections} />
             <main className="main">
                 <section className="section section--orange">
-                    <Banner />
+                    <Banner refProp={el => addToRefs(el, sections)} />
                     <div className="container">
-                        <About />
+                        <About refProp={el => addToRefs(el, sections)} />
                     </div>
-                    <Roadmap />
+                    <Roadmap refProp={el => addToRefs(el, sections)} />
                 </section>
-                <Features />
-                <Tokenomics />
-                <Minting />
-                <FAQ />
+                <Features refProp={el => addToRefs(el, sections)} />
+                <Tokenomics refProp={el => addToRefs(el, sections)} />
+                <Minting refProp={el => addToRefs(el, sections)} />
+                <FAQ refProp={el => addToRefs(el, sections)} />
             </main>
-            <Footer />
+            <Footer sections={sections} />
         </>
     );
 }

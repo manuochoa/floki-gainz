@@ -181,6 +181,10 @@
     width: 50px;
     height: 50px;
 
+    &__arrow {
+        color: #050402;
+    }
+
     &__arrow--left {
         transform: rotateZ(-90deg);
     }

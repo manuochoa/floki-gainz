@@ -1,13 +1,18 @@
 import { useEffect, useState } from "react";
 import logo from "../images/logo.png";
 import Social from './common/Social';
+import Menu from './common/Menu';
 
-export default function Header() {
+export default function Header({ sections }) {
     const [mobileScreen, setMobileScreen] = useState();
     const [menuOpened, setMenuOpened] = useState();
 
     const handleMobileScreen = () => {
         setMobileScreen(window.innerWidth < 990);
+    }
+
+    function menuCallback() {
+        setMenuOpened(false);
     }
 
     useEffect(() => {
@@ -26,39 +31,14 @@ export default function Header() {
                 <a href="/" className="logo header__logo">
                     <img src={logo} className="logo__icon" alt="logo" />
                 </a>
-                {!mobileScreen && <Menu />}
+                {!mobileScreen && <Menu className="menu--header" sections={sections} />}
                 <div className="header__column">
                     <Social className="social--header" />
                     <a href="/" className="button button--header header__button">Whitepaper</a>
                     <button className={"header__mobile-button" + (menuOpened ? " opened" : "")} onClick={() => setMenuOpened(!menuOpened)}><span></span></button>
                 </div>
             </div>
-            {mobileScreen && <Menu opened={menuOpened ? " opened" : ""} />}
+            {mobileScreen && <Menu className="menu--header" sections={sections} opened={menuOpened ? " opened" : ""} menuCallback={menuCallback} />}
         </header>
     )
 }
-
-const Menu = ({ opened }) => {
-    return (
-        <ul className={"header__menu " + (opened || "")}>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">About</button>
-            </li>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">Benefits</button>
-            </li>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">Mint</button>
-            </li>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">Roadmap</button>
-            </li>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">Tokenomics</button>
-            </li>
-            <li className="header__menu-item">
-                <button to="/" className="header__menu-link">FAQ</button>
-            </li>
-        </ul>
-    );
-};

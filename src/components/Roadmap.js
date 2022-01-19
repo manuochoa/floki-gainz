@@ -39,9 +39,9 @@ const roadmapArray = [
     },
 ];
 
-export default function Roadmap() {
+export default function Roadmap({ refProp }) {
     return (
-        <div className="roadmap">
+        <div className="roadmap" ref={refProp}>
             <h1 className="title roadmap__title container">ROADMAP</h1>
             <div className="roadmap__wrapper">
                 <ul className="cards-list cards-list--roadmap roadmap__cards-list container">

@@ -1,9 +1,10 @@
 import { useState } from "react";
 import logo from "../images/logo.png";
 import Arrow from './../Icons/Arrow';
+import Menu from "./common/Menu";
 import Social from "./common/Social";
 
-export default function Footer() {
+export default function Footer({ sections }) {
     const [value, setValue] = useState("");
 
     return (
@@ -21,26 +22,7 @@ export default function Footer() {
                         <Arrow className="footer__button-arrow" />
                     </button>
                 </div>
-                <ul className="footer__menu">
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">About</button>
-                    </li>
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">Benefits</button>
-                    </li>
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">Mint</button>
-                    </li>
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">Roadmap</button>
-                    </li>
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">Tokenomics</button>
-                    </li>
-                    <li className="footer__menu-item">
-                        <button to="/" className="footer__menu-link">FAQ</button>
-                    </li>
-                </ul>
+                <Menu sections={sections} className="menu--footer" />
                 <div className="footer__bottom">
                     <p className="footer__copyright">© 2022 Floki Gainz. All rights reserved</p>
                     <Social className="social--footer footer__social" />
