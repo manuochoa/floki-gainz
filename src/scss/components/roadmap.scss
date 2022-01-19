@@ -19,3 +19,31 @@
         margin-top: 64px;
     }
 }
+
+@media (max-width: 1099px) {
+
+    .roadmap {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .roadmap {
+
+        &__cards-list {
+            margin-top: 30px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .roadmap {
+
+        &__wrapper {
+            background-size: cover;
+        }
+    }
+}

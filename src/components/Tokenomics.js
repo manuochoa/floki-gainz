@@ -66,9 +66,9 @@ export default function Tokenomics() {
                         );
                     })}
                 </ul>
-                <p className="token__desc">
-                    500 million total supply. 10% transactional tax: 6% marketing, 4% lotteries. Market cap on Launch: approx. $400.000 - $500.000
-                </p>
+                <div className="token__desc-wrapper">
+                    <p className="token__desc">500 million total supply. 10% transactional tax: 6% marketing, 4% lotteries. Market cap on Launch: approx. $400.000 - $500.000</p>
+                </div>
             </div>
             <img src={bg2} className="token__background token__background--2" alt="bg2" />
         </div>

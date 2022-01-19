@@ -68,6 +68,7 @@ input[type="number"] {
 
     &__icon {
         display: block;
+        width: 100%;
     }
 }
 
@@ -75,6 +76,13 @@ input[type="number"] {
 
     &--orange {
         background-color: $orange;
+    }
+}
+
+@media (max-width: 767px) {
+
+    body {
+        font-size: 16px;
     }
 }
 

@@ -24,3 +24,37 @@
         line-height: 1.4;
     }
 }
+
+@media (max-width: 989px) {
+
+    .about {
+
+        &__wrapper {
+            padding: 60px 80px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+
+    .about {
+
+        &__wrapper {
+            padding: 40px;
+        }
+
+        &__text {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .about {
+
+        &__wrapper {
+            padding: 40px 20px;
+        }
+    }
+}

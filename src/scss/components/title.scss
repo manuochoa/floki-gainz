@@ -17,3 +17,17 @@
         font-family: $font-rounded-bold;
     }
 }
+
+@media (max-width: 767px) {
+
+    .title {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 479px) {
+
+    .title {
+        font-size: 30px;
+    }
+}

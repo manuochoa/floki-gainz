@@ -57,4 +57,228 @@
     &__button {
         margin-left: 24px;
     }
+
+    &__mobile-button {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+
+        color: $black;
+    }
+
+    &__mobile-button span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 80%;
+        height: 2px;
+
+        background-color: currentColor;
+        position: relative;
+    }
+
+    &__mobile-button span:before, &__mobile-button span:after {
+        content: "";
+
+        width: 100%;
+        height: 100%;
+        background-color: currentColor;
+
+        position: absolute;
+        left: 0;
+
+        transition: transform 0.2s cubic-bezier(0.23, 1, 0.320, 1);
+    }
+
+    &__mobile-button span:before {
+        top: -6px;
+    }
+
+    &__mobile-button span:after {
+        bottom: -6px;
+    }
+
+    &__mobile-button.opened span {
+        background-color: transparent;
+    }
+
+    &__mobile-button.opened {
+        color: $red;
+    }
+
+    &__mobile-button.opened span::before {
+        transform: rotateZ(45deg);
+        top: unset;
+        left: unset;
+    }
+
+    &__mobile-button.opened span::after {
+        transform: rotateZ(-45deg);
+        bottom: unset;
+        left: unset;
+    }
+}
+
+@media (max-width: 1219px) {
+
+    .header {
+        
+        &__menu {
+            padding: 0 35px;
+        }
+    }
+}
+
+@media (max-width: 1099px) {
+
+    .header {
+        
+        &__logo {
+            width: 14%;
+        }
+
+        &__menu-item:not(:first-child) {
+            margin-left: 25px;
+        }
+
+        &__menu-link {
+            font-size: 14px;
+        }
+
+        &__wrapper {
+            height: 70px;
+        }
+    }
+}
+
+@media (max-width: 989px) {
+
+    .header {
+
+        &__menu {
+            justify-content: space-between;
+            
+            height: 50px;
+            width: 100%;
+
+            margin: 0;
+            padding: 0 20px;
+
+            border-left: none;
+            border-right: none;
+            border-top: 2px solid $black;
+        }
+
+        &__menu-link {
+            font-size: 16px;
+        }
+
+        &__logo {
+            width: 155px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .header {
+
+        &__wrapper {
+            height: 60px;
+        }
+
+        &__menu {
+            height: 45px;
+        }
+
+        &__menu-item:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        &__menu-link {
+            font-size: 14px;
+        }
+
+        &__logo {
+            width: 120px;
+        }
+
+        &__button {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .header {
+        position: relative;
+
+        &__menu {
+            position: absolute;
+            flex-direction: column;
+            top: 100%;
+            border-top: none;
+            height: auto;
+            padding: 0 12px;
+
+            border-bottom: 2px solid $black;
+            background-color: $beige;   
+            z-index: 2;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+
+        &__menu.opened {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        &__menu-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            height: 40px;
+            width: 100%;
+
+            font-size: 16px;
+        }
+
+        &__menu-item {
+            width: 100%;
+        }
+
+        &__menu-item:not(:first-child) {
+            margin-left: 0;
+            border-top: 2px solid rgba(255, 255, 255, 0.4);
+        }
+
+        &__mobile-button {
+            display: flex;
+        }
+
+        &__button {
+            margin-left: 0;
+        }
+    }
+}
+
+@media (max-width: 359px) {
+
+    .header {
+
+        &__logo {
+            width: 100px;
+        }
+    }
 }

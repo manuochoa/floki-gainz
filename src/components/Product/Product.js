@@ -10,14 +10,14 @@ export default function Minting() {
     const [value, setValue] = useState(1);
     const [gallery] = useState([
         {
-            price: 4,
-            id: 1,
-            image: img1
-        },
-        {
             price: 2,
             id: 2,
             image: img2
+        },
+        {
+            price: 4,
+            id: 1,
+            image: img1
         },
     ]);
 

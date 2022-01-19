@@ -16,7 +16,9 @@ export default function App() {
             <main className="main">
                 <section className="section section--orange">
                     <Banner />
-                    <About />
+                    <div className="container">
+                        <About />
+                    </div>
                     <Roadmap />
                 </section>
                 <Features />

@@ -4,7 +4,7 @@ export default function Banner() {
     return (
         <div className="banner container">
             <div className="banner__column banner__column--1">
-                <h1 className="title banner__title">Welcome to floki gainz! $GAINZ <span className="title__red">stands to be the</span> biggest, buffets <span className="title__red">token launch</span> in <span className="title__number">2022</span>!</h1>
+                <h1 className="title banner__title">Welcome to floki gainz! $GAINZ <span className="title__red">stands to be the</span> biggest, buffest <span className="title__red">token launch</span> in <span className="title__number">2022</span>!</h1>
                 <div className="banner__buttons">
                     <a href="/" className="button button--beige banner__button">GET Started</a>
                     <a href="/" className="button banner__button">MINTING</a>

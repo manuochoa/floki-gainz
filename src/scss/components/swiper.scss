@@ -189,3 +189,19 @@
         transform: rotateZ(90deg);
     }
 }
+
+@media (max-width: 479px) {
+
+    .swiper {
+
+        &--token .swiper-button {
+            width: 35px;
+            height: 35px;
+            padding: 8px;
+        }
+
+        &--token .swiper-container {
+            margin: 0 10px;
+        }
+    }
+}

@@ -37,3 +37,26 @@
         background-color: $beige;
     }
 }
+
+@media (max-width: 1099px) {
+
+    .button {
+
+        &--header {
+            height: 50px;
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .button {
+
+        &--header {
+            height: 40px;
+            padding: 0 15px;
+            font-size: 12px;
+        }
+    }
+}

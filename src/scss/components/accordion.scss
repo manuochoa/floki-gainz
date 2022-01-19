@@ -36,9 +36,11 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
 
         width: 30px;
         height: 30px;
+        margin-left: 20px;
 
         border: 2px solid $black;
         border-radius: 50%;
@@ -90,5 +92,27 @@
 
     &__text-wrapper {
         padding-bottom: 32px;
+    }
+}
+
+@media (max-width: 619px) {
+
+    .accordion {
+
+        &__button {
+            height: 80px;
+            font-size: 20px;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+
+    .accordion {
+        
+        &__button {
+            height: 75px;
+            font-size: 18px;
+        }
     }
 }

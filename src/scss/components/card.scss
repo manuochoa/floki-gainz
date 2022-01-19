@@ -62,3 +62,48 @@
         font-weight: 900;
     }
 }
+
+@media (max-width: 1099px) {
+
+    .card {
+
+        &--roadmap &__wrapper {
+            padding: 20px 16px;
+        }
+    }
+}
+
+@media (max-width: 989px) {
+
+    .cards-list {
+
+        &--roadmap {
+            overflow: auto;
+            flex-wrap: nowrap;
+            padding-bottom: 20px;
+        }
+
+        &--roadmap &__item {
+            width: 276px;
+            flex-shrink: 0;
+        }
+
+        &--roadmap &__item:not(:first-child) {
+            margin-left: 20px;
+        }
+    }
+}
+
+@media (max-width: 619px) {
+
+    .cards-list {
+
+        &--roadmap {
+            padding-top: 20px;
+        }
+
+        &--roadmap &__item:not(:first-child) {
+            margin-left: 10px;
+        }
+    }
+}
