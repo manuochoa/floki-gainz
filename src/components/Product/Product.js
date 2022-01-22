@@ -110,7 +110,7 @@ export default function Minting({ refProp }) {
   }, []);
 
   return (
-    <div className="product container" ref={refProp}>
+    <div id="mint-box" className="product container" ref={refProp}>
       <CustomSwiper
         gallery={gallery}
         setItemIndex={setItemIndex}
