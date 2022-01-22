@@ -7,7 +7,7 @@ const featuresArray = [
   {
     title: "Fitness Competitions",
     text: "Our token gives you BIG incentive to shed those unwanted pounds, gain muscle and vastly improve your overall health! Join our regular community competitions to win real $BUSD!",
-    image4,
+    image: image4,
   },
   {
     title: "Weekly Lottery",
@@ -17,12 +17,12 @@ const featuresArray = [
   {
     title: "Highly Experienced Dev",
     text: "Our dev Stefan has years of experience and is highly trusted in the crypto world. He has several ongoing, long-standing projects and is NOT going anywhere!",
-    image2,
+    image: image2,
   },
   {
     title: "Dedicated, Full Marketing Wallet",
     text: "Lack of Marketing KILLS projects. That's why we apply a small tax to all transactions to assure we get the BEST influencers, the BEST ads and the BIGGEST pumps! Prepare to moon with us!",
-    image3,
+    image: image3,
   },
 ];
 
