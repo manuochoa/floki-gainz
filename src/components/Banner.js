@@ -12,7 +12,10 @@ export default function Banner({ refProp }) {
           <span className="title__number">2022</span>!
         </h1>
         <div className="banner__buttons">
-          <a href="/" className="button button--beige banner__button">
+          <a
+            href="https://t.me/flokigainz"
+            className="button button--beige banner__button"
+          >
             GET Started
           </a>
           <HashLink smooth to="#mint-box" className="button banner__button">

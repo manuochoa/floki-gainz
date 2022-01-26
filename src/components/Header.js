@@ -35,7 +35,7 @@ export default function Header({ sections }) {
         <div className="header__column">
           <Social className="social--header" />
           <a
-            href="http://flokigainz.com/wp-content/uploads/2022/01/Litepaper.pdf"
+            href="https://drive.google.com/file/d/121RbhqwgGaR0-nNy19URvxihivpB8wCn/view?usp=drivesdk"
             className="button button--header header__button"
           >
             Whitepaper
