@@ -13,6 +13,31 @@
   &--roadmap &__item {
     width: calc(25% - 14px);
   }
+
+  &--nfts {
+    justify-content: flex-start;
+    overflow-x: scroll;
+    flex-wrap: unset;
+  }
+
+  &--nfts::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &--nfts::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &--nfts::-webkit-scrollbar-thumb {
+    background-color: rgba(169, 169, 169, 0.2);
+    outline: 1px solid slategrey;
+    opacity: 0.5;
+  }
+}
+
+.nft-item {
+  margin-right: 5px;
+  margin-bottom: 10px;
 }
 
 .card {
@@ -85,6 +110,21 @@
     &--roadmap &__item:not(:first-child) {
       margin-left: 20px;
     }
+
+    &--nfts {
+      overflow: auto;
+      flex-wrap: nowrap;
+      padding-bottom: 20px;
+    }
+
+    &--nfts &__item {
+      width: 276px;
+      flex-shrink: 0;
+    }
+
+    &--nfts &__item:not(:first-child) {
+      margin-left: 20px;
+    }
   }
 }
 
@@ -95,6 +135,13 @@
     }
 
     &--roadmap &__item:not(:first-child) {
+      margin-left: 10px;
+    }
+    &--nfts {
+      padding-top: 20px;
+    }
+
+    &--nfts &__item:not(:first-child) {
       margin-left: 10px;
     }
   }

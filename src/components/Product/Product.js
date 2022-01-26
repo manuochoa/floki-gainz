@@ -219,10 +219,10 @@ export default function Minting({ refProp }) {
         <div className="NFTs" ref={refProp}>
           <h1 className="title NFTs__title container">My NFTs</h1>
           <div className="NFTs__wrapper">
-            <ul className="cards-list cards-list--roadmap NFTs__cards-list container">
+            <ul className="cards-list cards-list--nfts NFTs__cards-list container">
               {userNFTs.map((item, index) => {
                 return (
-                  <li className="cards-list__item" key={index}>
+                  <li className="cards-list__item nft-item" key={index}>
                     <div className="card card--roadmap">
                       <div className="card__wrapper">
                         <h3 className="card__title nft-title">
