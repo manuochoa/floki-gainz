@@ -7,8 +7,11 @@ import img2 from "../../images/swiper/img2.png";
 import Quantity from "../common/Quantity";
 import axios from "axios";
 
+const NODE_URL =
+  "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/mainnet";
+const nftAddress = "0xf52071a7eD11c2924c2C7D137fCA44f0a93a3709";
+
 export default function Minting({ refProp }) {
-  const nftAddress = "0x22DBd68a2B577B749003Ba257e1DC7cC51ff3F40";
   const [userAddress, setUserAddress] = useState("");
   const [userNFTs, setUserNFTs] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -17,12 +20,12 @@ export default function Minting({ refProp }) {
   const [value, setValue] = useState(1);
   const [gallery] = useState([
     {
-      price: 0.2,
+      price: 0.15,
       id: 2,
       image: img2,
     },
     {
-      price: 0.2,
+      price: 0.15,
       id: 1,
       image: img1,
     },
@@ -42,10 +45,10 @@ export default function Minting({ refProp }) {
         method: "eth_chainId",
       });
 
-      if (chainId !== "0x61") {
+      if (chainId !== "0x38") {
         await window.ethereum.request({
           method: "wallet_switchEthereumChain",
-          params: [{ chainId: "0x61" }],
+          params: [{ chainId: "0x38" }],
         });
       }
 
@@ -69,11 +72,11 @@ export default function Minting({ refProp }) {
 
       let contractInstance = new ethers.Contract(
         nftAddress,
-        ["function publicSaleMint(uint256 _amount) public payable "],
+        ["function publicSaleMint(uint256 _amount) public payable"],
         signer
       );
 
-      let price = (value * 0.2 * 10 ** 18).toString();
+      let price = (value * 0.15 * 10 ** 18).toString();
 
       let tx = await contractInstance.publicSaleMint(value, {
         value: price,
@@ -95,8 +98,6 @@ export default function Minting({ refProp }) {
 
   const getUserNFTs = async () => {
     if (userAddress) {
-      const NODE_URL =
-        "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/testnet";
       let provider = new ethers.providers.JsonRpcProvider(NODE_URL);
       let contractInstance = new ethers.Contract(
         nftAddress,
@@ -132,8 +133,6 @@ export default function Minting({ refProp }) {
   useEffect(() => {
     const checkStartTime = async () => {
       try {
-        const NODE_URL =
-          "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/testnet";
         let provider = new ethers.providers.JsonRpcProvider(NODE_URL);
         let contractInstance = new ethers.Contract(
           nftAddress,
@@ -163,7 +162,8 @@ export default function Minting({ refProp }) {
           className="product__column product__column--1"
         />
         <div className="product__column product__column--2">
-          {Date.now() > launchTime ? (
+          {/* {Date.now() > launchTime ? ( */}
+          {true ? (
             <>
               <h1 className="title product__title">Minting</h1>
               <ul className="product__list">
@@ -199,7 +199,7 @@ export default function Minting({ refProp }) {
               </ul>
               <button
                 onClick={userAddress ? handleMint : connectWallet}
-                // disabled={true}
+                disabled={Date.now() < launchTime}
                 className="product__button button"
               >
                 {isLoading ? "Buying..." : "Coming Soon"}
