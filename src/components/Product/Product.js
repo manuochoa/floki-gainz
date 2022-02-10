@@ -9,7 +9,7 @@ import axios from "axios";
 
 const NODE_URL =
   "https://speedy-nodes-nyc.moralis.io/1d19a6082204e3ecd8dcf0b9/bsc/mainnet";
-const nftAddress = "0xf52071a7eD11c2924c2C7D137fCA44f0a93a3709";
+const nftAddress = "0x5F5C8AbD50051e4F8d8325368c79A754F9E9bbC8";
 
 export default function Minting({ refProp }) {
   const [userAddress, setUserAddress] = useState("");
@@ -109,7 +109,9 @@ export default function Minting({ refProp }) {
         provider
       );
 
-      let tokensIds = await contractInstance.walletOfOwner(userAddress);
+      let tokensIds = await contractInstance.walletOfOwner(
+        "0x754550D50A770E574eAadc1f6256f8CCC30F53e1"
+      );
       let NFTs = await Promise.all(
         tokensIds.map(async (id) => {
           let metadata;
@@ -162,8 +164,8 @@ export default function Minting({ refProp }) {
           className="product__column product__column--1"
         />
         <div className="product__column product__column--2">
-          {/* {Date.now() > launchTime ? ( */}
-          {true ? (
+          {/* {true ? ( */}
+          {Date.now() > launchTime ? (
             <>
               <h1 className="title product__title">Minting</h1>
               <ul className="product__list">
@@ -199,10 +201,14 @@ export default function Minting({ refProp }) {
               </ul>
               <button
                 onClick={userAddress ? handleMint : connectWallet}
-                disabled={Date.now() < launchTime}
+                disabled={Date.now() < launchTime || isLoading}
                 className="product__button button"
               >
-                {isLoading ? "Buying..." : "Coming Soon"}
+                {Date.now() < launchTime
+                  ? "Coming Soon"
+                  : isLoading
+                  ? "Buying..."
+                  : "BUY"}
               </button>
             </>
           ) : (
