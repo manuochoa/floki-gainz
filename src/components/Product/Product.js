@@ -7,7 +7,7 @@ import img2 from "../../images/swiper/img2.png";
 import Quantity from "../common/Quantity";
 
 export default function Minting({ refProp }) {
-  const nftAddress = "0x22DBd68a2B577B749003Ba257e1DC7cC51ff3F40";
+  const nftAddress = "0xB85BA6FA7deC1CE04b26AD6963F82a8633e0F179";
   const [userAddress, setUserAddress] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [itemIndex, setItemIndex] = useState(0);
